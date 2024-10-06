@@ -4,11 +4,11 @@
         <img src="@/assets/img/logo.png" alt="Profile Image" class="h-full w-full"> <!-- ปรับขนาดที่นี่ -->
       </div>
       <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#" class="hover:text-purple-500">Home</a></li>
-          <li><a href="#" class="hover:text-purple-500">About</a></li>
-          <li><a href="#" class="hover:text-purple-500">Project</a></li>
-          <li><a href="#" class="hover:text-purple-500">Contact</a></li>
+        <ul class="flex space-x-6 pr-36 ">
+          <li><a href="#" class="hover:text-green-300"><Icon icon="material-symbols-light:home-and-garden-outline"  style="font-size: 28px;" />Home</a></li>
+          <li><a href="#" class="hover:text-green-300"><Icon icon="arcticons:shareme" style="font-size: 28px;" />About</a></li>
+          <li><a href="#" class="hover:text-green-300"> <Icon icon="la:project-diagram" style="font-size: 28px;" /> Project</a></li>
+          <li><a href="#" class="hover:text-green-300"> <Icon icon="line-md:compass-loop"   style="font-size: 28px;" />Contact</a></li>
         </ul>
       </nav>
     </header>

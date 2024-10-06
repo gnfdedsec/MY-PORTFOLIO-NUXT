@@ -8,5 +8,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  plugins: [{ src: '~/plugins/iconify.js', mode: 'client' }] // เพิ่มบรรทัดนี้
+  plugins: [{ src: '~/plugins/iconify.js', mode: 'client' },
+    { src: '~/plugins/particles.js', mode: 'client' }
+  ] ,
+  build: {
+    transpile: ['particles.js']
+  }// เพิ่มบรรทัดนี้
+
 })

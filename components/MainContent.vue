@@ -1,30 +1,47 @@
 <template>
-    <main class="flex flex-col md:flex-row items-center justify-between py-20 px-10 bg-gray-800 text-white">
-      <div>
+    <main class="flex flex-col md:flex-row  justify-between  px-10 bg-gray-800 text-white h-[500px] rounded-xl border-4 border-green-500 ">
+      <!-- Left column -->
+      <div class="pt-20 px-10">
         <h2 class="text-gray-400 text-lg">Hi !</h2>
-        <h1 class="text-4xl font-bold">I'm <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom">ALEX TH</span></h1>
-        <p class="text-lg mt-3"> Web Developer / Frontend / Backend /Teaster</p>
+        <h1 class="text-4xl font-bold">
+          I'm <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom">ALEX TH</span>
+        </h1>
+        <p class="text-lg mt-3">Web Developer / Frontend / Backend / Teaster</p>
         <div class="mt-5 space-x-3">
           <button class="bg-green-500 text-white py-2 px-4 rounded">Hire Me</button>
           <button class="bg-gray-700 text-white py-2 px-4 rounded">Portfolio</button>
-          <p class="text-orange-400 mb-2">
-           
+          <p class="text-lg mt-2">
+            <span class="border border-green-600 rounded-full px-4 text-sm text-green-500 py-0.5 ">
+              Let's get to know me
+            </span>
           </p>
-          <p class="text-lg">
- 
-            <span class="border border-green-600 rounded-full px-4 text-sm text-green-500 py-0.5">
-                Let's get to know me
-   </span>
-  </p>
         </div>
-        <div class="wrapper">
+        <div class="wrapper mt-10 rounded border border-green-500 p-4">
           <div class="typing-container">
             <span class="typing">{{ currentText }}</span>
           </div>
         </div>
       </div>
-      <div class="mt-10 md:mt-0">
-        <img src="@/assets/img/profile.jpg" alt="Profile Image" class="rounded-full w-48 h-48 object-cover bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom">
+  
+      <!-- Middle column -->
+      <div class="flex-1">
+     
+      </div>
+  
+      <!-- Right column -->
+      <div class="flex-1 flex flex-col items-center pt-20 pr-10  mt- md:mt-0" >
+        <img
+          src="@/assets/img/profile.jpg"
+          alt="Profile Image"
+          class="rounded-full w-48 h-48 object-cover bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom mb-4"
+        >
+        <div class="flex items-center">
+          <Icon icon="ph:dev-to-logo-thin" class="text-5xl mr-2" />
+          <div>
+            <p>Examinee ID : 67310</p>
+            <p class="text-green-500">MR.SURAWUT SUPON (LEK)</p>
+          </div>
+        </div>
       </div>
     </main>
   </template>
@@ -33,17 +50,22 @@
   export default {
     data() {
       return {
-        texts: ["Hi everyone!  ","This site are going to show you ","A part of my work.", "So , are you ready ?"], // ข้อความที่ต้องการพิมพ์
+        texts: [
+          "Hi everyone !  ",
+          "This site are going to show you, ",
+          "A part of my works.",
+          "So , Let's check out my works"
+        ],
         currentText: '',
         currentIndex: 0
       }
     },
     mounted() {
-      this.typeText() // เริ่มการพิมพ์เมื่อคอมโพเนนต์ถูก mount
+      this.typeText()
     },
     methods: {
       typeText() {
-        const text = this.texts[this.currentIndex] // ข้อความปัจจุบันที่จะพิมพ์
+        const text = this.texts[this.currentIndex]
         let charIndex = 0
   
         const typingInterval = setInterval(() => {
@@ -52,7 +74,6 @@
             charIndex++
           } else {
             clearInterval(typingInterval)
-            // ตรวจสอบว่าถ้าเป็นข้อความสุดท้าย จะไม่ลบข้อความออก
             if (this.currentIndex < this.texts.length - 1) {
               setTimeout(() => {
                 this.eraseText()
@@ -64,12 +85,12 @@
       eraseText() {
         const erasingInterval = setInterval(() => {
           if (this.currentText.length > 0) {
-            this.currentText = this.currentText.slice(0, -1) // ลบข้อความทีละตัวอักษร
+            this.currentText = this.currentText.slice(0, -1)
           } else {
             clearInterval(erasingInterval)
-            this.currentIndex++ // ไปที่ข้อความถัดไป
+            this.currentIndex++
             setTimeout(() => {
-              this.typeText() // เริ่มพิมพ์ข้อความถัดไป
+              this.typeText()
             }, 500)
           }
         }, 50)
@@ -95,6 +116,7 @@
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
+    animation: blink 1s step-end infinite;
   }
   
   @keyframes blink {
@@ -105,9 +127,4 @@
       border-color: white;
     }
   }
-  
-  .typing {
-    animation: blink 1s step-end infinite;
-  }
   </style>
-  
