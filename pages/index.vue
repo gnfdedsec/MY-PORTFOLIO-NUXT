@@ -1,0 +1,26 @@
+<template>
+    <div>
+    
+      <MainContent />
+      
+    </div>
+  </template>
+  
+  <script>
+ 
+  import MainContent from '@/components/MainContent.vue'
+  
+  
+  export default {
+    components: {
+    
+      MainContent
+     
+    }
+  }
+  </script>
+  
+  <style scoped>
+  /* สไตล์ที่นี่ถ้าจำเป็น */
+  </style>
+  
