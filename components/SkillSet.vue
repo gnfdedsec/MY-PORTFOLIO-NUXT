@@ -1,66 +1,73 @@
 <template>
  <div  class="flex flex-col items-center  border border-black mt-2 p-4 rounded-lg"> 
-
-    <Icon icon="line-md:document-code" class="text-6xl text-orange-400" />
-
-        <h1 class=" text-5xl mt-1 font-bold">
-           MY  <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_6px] bg-no-repeat bg-bottom font-mono text-7xl">SKILLS</span>
-    </h1>
-  
-    <svg class="animate-bounce w-6 h-6 ...">
-  <!-- ... -->dd
-</svg>
-    <div class="flex flex-row justify-center  items-center mt-10">
-        <button class="border border-gray-500  rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-            <Icon icon="teenyicons:wordpress-solid" class="text-6xl text-gray-900" />
-        <span class="text-gray-500 mt-2 ml-2"> Wordpress</span>
-      </button>
-      <!-- ปุ่มที่มีเส้นขอบสีเขียวและไอคอน Docker -->
-      <button class="border border-gray-500 p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2 rounded-xl  ">
-        <Icon icon="devicon-plain:git-wordmark"  class="text-6xl text-gray-800" />
-        <span class="text-slate-500 mt-2">Github</span>
-      </button>
-      <button class="border border-gray-500  rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-        <Icon icon="file-icons:nextjs" class="text-6xl text-gray-900" />
-        <span class="text-gray-500 mt-2 ml-2"> Next js</span>
-      </button>
-      <button class="border border-gray-500   p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2 rounded-xl ">
-        <Icon icon="file-icons:docker" class="text-6xl text-gray-800" />
-        <span class="text-gray-500 mt-2">Docker</span>
-      </button>
-      <button class="border border-gray-500  rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-        <Icon icon="file-icons:test-react" class="text-6xl text-gray-900" />
-        <span class="text-gray-500 mt-2 ml-2"> React js</span>
-      </button>
-      <button class="border border-gray-500 rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-      <Icon icon="devicon-plain:php" class="text-6xl text-gray-800" />
-      <span class="text-gray-500 mt-2">PHP</span>
-    </button>
-    <button class="border border-gray-500 rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-        <Icon icon="file-icons:tailwind"  class="text-6xl text-gray-800" />
-      <span class="text-gray-500 mt-2">Tailwind</span>
-    </button>
-    <button class="border border-gray-500 rounded-md p-4 flex items-center hover:bg-gray-50 transition duration-500 ml-2">
-        <Icon icon="codicon:vscode-insiders" class="text-6xl text-gray-900" />
-      <span class="text-gray-500 mt-2">VScode</span>
-    </button>
-
-
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+        <button class="brutalism-button animate__animated animate__fadeInUp" v-for="(button, index) in buttons" :key="index" :class="{'md:flex': index === 2, 'lg:flex': index > 2, 'hidden': (index === 2 && !isMdScreen) || (index > 2 && !isLgScreen)}" :style="{ animationDelay: `${index * 100}ms` }">
+            <Icon :icon="button.icon" class="text-4xl md:text-6xl" />
+            <span class="mt-2 text-sm md:text-base">{{ button.name }}</span>
+        </button>
     </div>
 </div>
   </template>
   
   <script>
   import { Icon } from '@iconify/vue'; // อย่าลืมนำเข้า Iconify
-  
+  import { ref, onMounted } from 'vue';
+  import 'animate.css';
+
   export default {
     components: {
       Icon
+    },
+    setup() {
+      const buttons = [
+        { name: 'Wordpress', icon: 'teenyicons:wordpress-solid' },
+        { name: 'Github', icon: 'devicon-plain:git-wordmark' },
+        { name: 'Next.js', icon: 'file-icons:nextjs' },
+        { name: 'Docker', icon: 'file-icons:docker' },
+        { name: 'React.js', icon: 'file-icons:test-react' },
+        { name: 'PHP', icon: 'devicon-plain:php' },
+        { name: 'Tailwind', icon: 'file-icons:tailwind' },
+        { name: 'VSCode', icon: 'codicon:vscode-insiders' },
+      ];
+
+      const isMdScreen = ref(false);
+      const isLgScreen = ref(false);
+
+      onMounted(() => {
+        const checkScreenSize = () => {
+          isMdScreen.value = window.innerWidth >= 768;
+          isLgScreen.value = window.innerWidth >= 1024;
+        };
+
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+
+        buttons.forEach((_, index) => {
+          setTimeout(() => {
+            const button = document.querySelectorAll('.brutalism-button')[index];
+            button.classList.remove('translate-y-4', 'opacity-0');
+          }, index * 100);
+        });
+      });
+
+      return {
+        buttons,
+        isMdScreen,
+        isLgScreen,
+      };
     }
   };
   </script>
   
   <style scoped>
+  @import 'animate.css';
+
   /* คุณสามารถเพิ่มการปรับแต่ง CSS เพิ่มเติมได้ที่นี่ */
-  </style>
+  .brutalism-button {
+    @apply flex flex-col items-center justify-center p-4 bg-white text-black border-2 border-black transition-colors duration-300;
+  }
   
+  .brutalism-button:hover {
+    @apply bg-black text-white;
+  }
+  </style>

@@ -1,41 +1,43 @@
 <template>
   <div>
-    <div @mouseenter="showSkillSet">
+   
       <MainContent />
-    </div>
-    <transition name="fade">
-      <SkillSet v-if="isSkillSetVisible" />
-    </transition>
+      <ShootingStarsBg> <div class="w-full "> 0 </div> </ ShootingStarsBg>
+    <FavoriteQuote />
+    <h1 class="text-3xl sm:text-4xl md:text-4xl mt-1 font-bold text-center">
+      MY <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_6px] bg-no-repeat bg-bottom font-mono text-6xl sm:text-4xl md:text-3xl">SKILLS</span>
+    </h1>
+    <AnimationFade > <SkillSet /></AnimationFade>     
+   
   </div>
 </template>
 
 <script>
 import MainContent from '@/components/MainContent.vue'
+import FavoriteQuote from '@/components/FavoriteQuote.vue'
 import SkillSet from '~/components/SkillSet.vue'
+import AnimationFade from '~/components/AnimationFade.vue'
+import ShootingStarsBg from '~/components/ShootingStarsBg.vue'
 
 export default {
   components: {
     MainContent,
-    SkillSet
+    FavoriteQuote,
+    SkillSet,
+    AnimationFade,
+    ShootingStarsBg
   },
   data() {
     return {
-      isSkillSetVisible: false
+   
     }
   },
   methods: {
-    showSkillSet() {
-      this.isSkillSetVisible = true; // แสดง SkillSet เมื่อเมาส์เลื่อนเข้ามาครั้งเดียว
-    }
+
   }
 }
 </script>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active ในบางเวอร์ชัน */ {
-  opacity: 0;
-}
+/* เก็บ CSS อื่นๆ ที่ไม่เกี่ยวกับ fade ไว้ */
 </style>
