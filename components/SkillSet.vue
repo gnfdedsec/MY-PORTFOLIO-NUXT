@@ -1,7 +1,7 @@
 <template>
  <div  class="flex flex-col items-center  border border-black mt-2 p-4 rounded-lg"> 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
-        <button class="brutalism-button animate__animated animate__fadeInUp" v-for="(button, index) in buttons" :key="index" :class="{'md:flex': index === 2, 'lg:flex': index > 2, 'hidden': (index === 2 && !isMdScreen) || (index > 2 && !isLgScreen)}" :style="{ animationDelay: `${index * 100}ms` }">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-5">
+        <button class="brutalism-button animate__animated animate__fadeInUp" v-for="(button, index) in buttons" :key="index" :class="{'md:flex': index >= 2 && index < 3, 'lg:flex': index >= 3, 'hidden': (index >= 2 && index < 3 && !isMdScreen) || (index >= 3 && !isLgScreen)}" :style="{ animationDelay: `${index * 100}ms` }">
             <Icon :icon="button.icon" class="text-4xl md:text-6xl" />
             <span class="mt-2 text-sm md:text-base">{{ button.name }}</span>
         </button>
@@ -28,6 +28,8 @@
         { name: 'PHP', icon: 'devicon-plain:php' },
         { name: 'Tailwind', icon: 'file-icons:tailwind' },
         { name: 'VSCode', icon: 'codicon:vscode-insiders' },
+        { name: 'PostgreSQL', icon: 'devicon-plain:postgresql-wordmark' },
+        { name: 'MySQL', icon: 'devicon-plain:mysql-wordmark' },
       ];
 
       const isMdScreen = ref(false);
