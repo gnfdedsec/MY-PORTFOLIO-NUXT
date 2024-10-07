@@ -10,8 +10,10 @@
         <div class="flex items-center">
           <Icon icon="ph:dev-to-logo-thin" class="text-5xl mr-2" />
           <div>
-            <p>Examinee ID : 67310</p>
-            <p class="text-green-500">MR.SURAWUT SUPON (LEK)</p>
+          
+            <p class="text-green-500">MR.SURAWUT SUPON (ALEX)</p>
+            <p>Examinee ID : </p>
+            <p class="text-4xl"><span ref="counter">0</span></p>
           </div>
         </div>
       </div>
@@ -52,16 +54,18 @@
       return {
         texts: [
           "Hi everyone !  ",
-          "This site i going to show you, ",
+          "This site is going to show you, ",
           "A part of my works.",
           "So , Let's check out my works"
         ],
         currentText: '',
-        currentIndex: 0
+        currentIndex: 0,
+        targetNumber: 67310
       }
     },
     mounted() {
       this.typeText()
+      this.animateCounter()
     },
     methods: {
       typeText() {
@@ -94,6 +98,27 @@
             }, 500)
           }
         }, 50)
+      },
+      animateCounter() {
+        const counter = this.$refs.counter
+        const duration = 5000 // 5 วินาที
+        const start = 0
+        const end = this.targetNumber
+        const startTime = performance.now()
+
+        const updateCounter = (currentTime) => {
+          const elapsedTime = currentTime - startTime
+          if (elapsedTime < duration) {
+            const progress = elapsedTime / duration
+            const current = Math.round(start + (end - start) * progress)
+            counter.innerHTML = current
+            requestAnimationFrame(updateCounter)
+          } else {
+            counter.innerHTML = end
+          }
+        }
+
+        requestAnimationFrame(updateCounter)
       }
     }
   }
