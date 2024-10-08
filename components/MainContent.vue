@@ -26,8 +26,8 @@
         </h1>
         <p class="text-base lg:text-lg mt-2 lg:mt-3">Web Developer / Frontend / Backend / Teaster</p>
         <div class="mt-4 lg:mt-5 space-y-2 lg:space-y-0 lg:space-x-3 flex flex-col lg:flex-row items-center justify-center lg:justify-start">
-          <button class="bg-green-500 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base">Hire Me</button>
-          <button class="bg-gray-700 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base">Portfolio</button>
+          <button class="bg-green-500 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Hire Me</button>
+          <button class="bg-gray-700 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Portfolio</button>
           <p class="text-base lg:text-lg mt-2 lg:mt-0">
             <span class="border border-green-600 rounded-full px-3 lg:px-4 text-xs lg:text-sm text-green-500 py-0.5">
               Let's get to know me
@@ -42,10 +42,14 @@
       </div>
 
       <!-- คอลัมน์กลาง -->
-      <div class="lg:order-2 lg:flex-1 flex items-center justify-center ">
-        <button class="border border-green-500 p-3 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-3xl">
-           Examination CRUD
-        </button>
+      <div class="lg:order-2 lg:flex-1 flex items-center justify-center mt-2 mb-2 lg:my-0">
+        <NuxtLink
+          v-show="showButton"
+          to="/api-playground"
+          class="border border-green-500 p-3 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-lg lg:text-3xl animate-fade-up focus:outline-none"
+        >
+          สอบปฎิบัติการคอมพิวเตอร์ ม.อุบลฯ
+        </NuxtLink>
       </div>
     </main>
   </template>
@@ -62,12 +66,14 @@
         ],
         currentText: '',
         currentIndex: 0,
-        targetNumber: 67310
+        targetNumber: 67310,
+        showButton: false
       }
     },
     mounted() {
       this.typeText()
       this.animateCounter()
+      this.showButtonAfterDelay()
     },
     methods: {
       typeText() {
@@ -121,6 +127,11 @@
         }
 
         requestAnimationFrame(updateCounter)
+      },
+      showButtonAfterDelay() {
+        setTimeout(() => {
+          this.showButton = true
+        }, 5000) // 5000 มิลลิวินาที = 5 วินาที
       }
     }
   }
@@ -156,5 +167,29 @@
     50% {
       border-color: white;
     }
+  }
+  
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out;
+  }
+  
+  .nuxt-link-exact-active:focus {
+    outline: none;
+  }
+
+  /* เพิ่มสไตล์นี้เพื่อลบเอฟเฟกต์การกดทั้งหมด */
+  a {
+    -webkit-tap-highlight-color: transparent;
   }
   </style>
