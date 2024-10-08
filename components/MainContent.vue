@@ -42,8 +42,10 @@
       </div>
 
       <!-- คอลัมน์กลาง -->
-      <div class="lg:order-2 lg:flex-1">
-        <!-- เนื้อหาคอลัมน์กลาง (ถ้ามี) -->
+      <div class="lg:order-2 lg:flex-1 flex items-center justify-center ">
+        <button class="border border-green-500 p-3 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-3xl">
+           Examination CRUD
+        </button>
       </div>
     </main>
   </template>
@@ -56,7 +58,7 @@
           "Hi everyone !  ",
           "This site is going to show you, ",
           "A part of my works.",
-          "So , Let's check out my works"
+          "So, Let's check out and solve problems"
         ],
         currentText: '',
         currentIndex: 0,

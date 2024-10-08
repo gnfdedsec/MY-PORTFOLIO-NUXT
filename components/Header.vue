@@ -2,7 +2,9 @@
     <header class="bg-gray-900 text-white p-5">
       <div class="container mx-auto flex justify-between items-center">
         <div class=" w-40 md:w-80 lg:w-[400px]">
-          <img src="@/assets/img/logo.png" alt="Profile Image" class="h-full w-full object-cover">
+          <NuxtLink to="/">
+            <img src="@/assets/img/logo.png" alt="Profile Image" class="h-full w-full object-cover">
+          </NuxtLink>
         </div>
         
         <!-- Hamburger menu สำหรับมือถือและ iPad -->
