@@ -2,7 +2,7 @@
   <div class="p-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <div v-for="project in projects" :key="project.name" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <img :src="require(`@/assets${project.image}`)" :alt="project.name" class="w-full h-48 object-cover">
+        <img :src="getImageUrl(project.image)" :alt="project.name" class="w-full h-48 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
           <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
@@ -45,6 +45,10 @@ const projects = ref([
     technologies: ['WordPress', 'PHP']
   }
 ])
+
+function getImageUrl(name) {
+  return new URL(`/assets${name}`, import.meta.url).href
+}
 </script>
 
 <style scoped>
