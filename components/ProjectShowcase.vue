@@ -23,13 +23,13 @@ export default {
       projects: [
         {
           name: 'CVS ENKKU',
-          image: 'assets/card1.png',
+          image: '@/assets/img/card1.png',
           detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
           technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
         },
         {
           name: 'ENKKU Donations',
-          image: 'assets/card2.png',
+          image: '@/assets/img/card2.png',
           detail: 'ระบบรับบริจาคออนไลน์',
           technologies: ['PHP', 'Bulma','mysql'
 
@@ -37,13 +37,13 @@ export default {
         },
         {
           name: 'HRM',
-          image: 'assets/card3.png',
+          image: '@/assets/img/card3.png',
           detail: 'ระบบจัดการทรัพยากรบุคคล',
           technologies: ['React', 'Express.js']
         },
         {
           name: 'Multisite Management',
-          image: 'assets/card4.png',
+          image: '@/assets/img/card4.png',
           detail: 'ระบบจัดการหลายเว็บไซต์',
           technologies: ['WordPress', 'PHP']
         }
