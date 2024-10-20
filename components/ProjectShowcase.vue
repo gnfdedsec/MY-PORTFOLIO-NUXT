@@ -37,7 +37,7 @@ export default {
         },
         {
           name: 'HRM',
-          image: 'assets/card3.jpg',
+          image: 'assets/card3.png',
           detail: 'ระบบจัดการทรัพยากรบุคคล',
           technologies: ['React', 'Express.js']
         },
