@@ -2,7 +2,7 @@
   <div class="p-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <div v-for="project in projects" :key="project.name" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <img :src="project.image" :alt="project.name" class="w-full h-48 object-cover">
+        <img :src="require(`@/assets${project.image}`)" :alt="project.name" class="w-full h-48 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
           <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
@@ -18,30 +18,29 @@
 
 <script setup>
 import { ref } from 'vue'
-import { defineAssetUrl } from '#imports'
 
 const projects = ref([
   {
     name: 'CVS ENKKU',
-    image: defineAssetUrl('/img/card1.png'),
+    image: '/img/card1.png',
     detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
   },
   {
     name: 'ENKKU Donations',
-    image: defineAssetUrl('/img/card2.png'),
+    image: '/img/card2.png',
     detail: 'ระบบรับบริจาคออนไลน์',
     technologies: ['PHP', 'Bulma','mysql']
   },
   {
     name: 'HRM',
-    image: defineAssetUrl('/img/card3.png'),
+    image: '/img/card3.png',
     detail: 'ระบบจัดการทรัพยากรบุคคล',
     technologies: ['React', 'Express.js']
   },
   {
     name: 'Multisite Management',
-    image: defineAssetUrl('/img/card4.png'),
+    image: '/img/card4.png',
     detail: 'ระบบจัดการหลายเว็บไซต์',
     technologies: ['WordPress', 'PHP']
   }
