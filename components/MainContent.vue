@@ -45,7 +45,7 @@
       <div class="lg:order-2 lg:flex-1 flex items-center justify-center mt-2 mb-2 lg:my-0">
         <NuxtLink
           v-show="showButton"
-          to="/api-playground"
+          to="/projecshowcase"
           class="border border-green-500 p-3 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-lg lg:text-3xl animate-fade-up focus:outline-none"
         >
           สอบสำนักคอมพิวเตอร์ฯ ม.อุบลฯ
