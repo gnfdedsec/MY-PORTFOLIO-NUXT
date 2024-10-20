@@ -2,7 +2,7 @@
   <div class="p-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <div v-for="project in projects" :key="project.name" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-        <img :src="getImageUrl(project.image)" :alt="project.name" class="w-full h-48 object-cover">
+        <img :src="project.image" :alt="project.name" class="w-full h-48 object-cover">
         <div class="p-4">
           <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
           <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
@@ -22,13 +22,13 @@ import { ref } from 'vue'
 const projects = ref([
   {
     name: 'CVS ENKKU',
-    image: '/img/card1.png',
+    image: 'https://cvs.enit.kku.ac.th/cvsenkku.svg', // แทนที่ด้วย URL จริงของรูปภาพ
     detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
   },
   {
     name: 'ENKKU Donations',
-    image: '/img/card2.png',
+    image: 'https://example.com/path/to/image2.png', // แทนที่ด้วย URL จริงของรูปภาพ
     detail: 'ระบบรับบริจาคออนไลน์',
     technologies: ['PHP', 'Bulma','mysql']
   },
@@ -45,10 +45,6 @@ const projects = ref([
     technologies: ['WordPress', 'PHP']
   }
 ])
-
-function getImageUrl(name) {
-  return new URL(`/assets${name}`, import.meta.url).href
-}
 </script>
 
 <style scoped>
