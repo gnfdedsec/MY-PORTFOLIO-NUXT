@@ -22,25 +22,25 @@ import { ref } from 'vue'
 const projects = ref([
   {
     name: 'CVS ENKKU',
-    image: 'https://cvs.enit.kku.ac.th/cvsenkku.svg', // แทนที่ด้วย URL จริงของรูปภาพ
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
   },
   {
     name: 'ENKKU Donations',
-    image: 'https://example.com/path/to/image2.png', // แทนที่ด้วย URL จริงของรูปภาพ
+    image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     detail: 'ระบบรับบริจาคออนไลน์',
     technologies: ['PHP', 'Bulma','mysql']
   },
   {
     name: 'HRM',
-    image: '/img/card3.png',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     detail: 'ระบบจัดการทรัพยากรบุคคล',
     technologies: ['React', 'Express.js']
   },
   {
     name: 'Multisite Management',
-    image: '/img/card4.png',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
     detail: 'ระบบจัดการหลายเว็บไซต์',
     technologies: ['WordPress', 'PHP']
   }
