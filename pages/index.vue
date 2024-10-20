@@ -41,3 +41,4 @@ export default {
 <style scoped>
 /* เก็บ CSS อื่นๆ ที่ไม่เกี่ยวกับ fade ไว้ */
 </style>
+

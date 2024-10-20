@@ -48,7 +48,7 @@
           to="/api-playground"
           class="border border-green-500 p-3 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-lg lg:text-3xl animate-fade-up focus:outline-none"
         >
-          สอบปฎิบัติการคอมพิวเตอร์ ม.อุบลฯ
+          สอบสำนักคอมพิวเตอร์ฯ ม.อุบลฯ
         </NuxtLink>
       </div>
     </main>

@@ -16,7 +16,7 @@
         <nav class="hidden md:block">
           <ul class="flex space-x-6">
             <li><a href="#" class="hover:text-green-300"><Icon icon="material-symbols-light:home-and-garden-outline" class="text-2xl" /> Home</a></li>
-            <li><a href="#" class="hover:text-green-300"><Icon icon="arcticons:shareme" class="text-2xl" /> About</a></li>
+            <li><a href="#" class="hover:text-green-300"><Icon icon="arcticons:shareme" class="text-2xl" /> Skills</a></li>
             <li><a href="#" class="hover:text-green-300"><Icon icon="la:project-diagram" class="text-2xl" /> Project</a></li>
             <li><a href="#" class="hover:text-green-300"><Icon icon="line-md:compass-loop" class="text-2xl" /> Contact</a></li>
           </ul>
@@ -27,7 +27,7 @@
       <nav v-if="isMenuOpen" class="md:hidden mt-4">
         <ul class="space-y-2">
           <li><a href="#" class="block hover:text-green-300"><Icon icon="material-symbols-light:home-and-garden-outline" class="text-2xl" /> Home</a></li>
-          <li><a href="#" class="block hover:text-green-300"><Icon icon="arcticons:shareme" class="text-2xl" /> About</a></li>
+          <li><a href="#" class="block hover:text-green-300"><Icon icon="arcticons:shareme" class="text-2xl" /> Skills</a></li>
           <li><a href="#" class="block hover:text-green-300"><Icon icon="la:project-diagram" class="text-2xl" /> Project</a></li>
           <li><a href="#" class="block hover:text-green-300"><Icon icon="line-md:compass-loop" class="text-2xl" /> Contact</a></li>
         </ul>
