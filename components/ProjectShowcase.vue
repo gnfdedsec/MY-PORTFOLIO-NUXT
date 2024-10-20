@@ -16,41 +16,39 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      projects: [
-        {
-          name: 'CVS ENKKU',
-          image: '@/assets/img/card1.png',
-          detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
-          technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
-        },
-        {
-          name: 'ENKKU Donations',
-          image: '@/assets/img/card2.png',
-          detail: 'ระบบรับบริจาคออนไลน์',
-          technologies: ['PHP', 'Bulma','mysql'
+<script setup>
+import { ref } from 'vue'
+import card1 from '@/assets/img/card1.png'
+import card2 from '@/assets/img/card2.png'
+import card3 from '@/assets/img/card3.png'
+import card4 from '@/assets/img/card4.png'
 
-          ]
-        },
-        {
-          name: 'HRM',
-          image: '@/assets/img/card3.png',
-          detail: 'ระบบจัดการทรัพยากรบุคคล',
-          technologies: ['React', 'Express.js']
-        },
-        {
-          name: 'Multisite Management',
-          image: '@/assets/img/card4.png',
-          detail: 'ระบบจัดการหลายเว็บไซต์',
-          technologies: ['WordPress', 'PHP']
-        }
-      ]
-    };
+const projects = ref([
+  {
+    name: 'CVS ENKKU',
+    image: card1,
+    detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
+    technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
+  },
+  {
+    name: 'ENKKU Donations',
+    image: card2,
+    detail: 'ระบบรับบริจาคออนไลน์',
+    technologies: ['PHP', 'Bulma','mysql']
+  },
+  {
+    name: 'HRM',
+    image: card3,
+    detail: 'ระบบจัดการทรัพยากรบุคคล',
+    technologies: ['React', 'Express.js']
+  },
+  {
+    name: 'Multisite Management',
+    image: card4,
+    detail: 'ระบบจัดการหลายเว็บไซต์',
+    technologies: ['WordPress', 'PHP']
   }
-};
+])
 </script>
 
 <style scoped>

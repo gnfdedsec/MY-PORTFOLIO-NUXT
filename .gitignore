@@ -28,3 +28,6 @@ logs
 !*.jpg
 !*.jpeg
 !*.gif
+
+# ไม่ละเว้นไฟล์ component ของ Nuxt.js
+!components/**/*
