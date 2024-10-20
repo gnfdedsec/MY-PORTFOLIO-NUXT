@@ -7,9 +7,9 @@
           <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
           <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded-full">{{ tech }}</span>
+            <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-white bg-blue-500 rounded-full">{{ tech }}</span>
           </div>
-          <a href="#" class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-300">ดูรายละเอียด</a>
+          <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">ดูรายละเอียด</a>
         </div>
       </div>
     </div>
