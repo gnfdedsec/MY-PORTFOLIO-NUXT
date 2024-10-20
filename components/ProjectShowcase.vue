@@ -7,26 +7,44 @@
           <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
           <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-white bg-green-500 rounded-full">{{ tech }}</span>
+            <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-green-600 bg-green-100 rounded-full">{{ tech }}</span>
           </div>
-          <a href="#" class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors duration-300">ดูรายละเอียด</a>
+          <a href="#" class="inline-block text-green-600 border border-green-600 px-4 py-2 rounded hover:bg-green-600 hover:text-white transition-colors duration-300">ดูรายละเอียด</a>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'ProjectShowcase',
-  data() {
-    return {
-      projects: [
-        // ข้อมูลโปรเจ็กต์ของคุณ
-      ]
-    }
+<script setup>
+import { ref } from 'vue'
+
+const projects = ref([
+  {
+    name: 'CVS ENKKU',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
+    technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
+  },
+  {
+    name: 'ENKKU Donations',
+    image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    detail: 'ระบบรับบริจาคออนไลน์',
+    technologies: ['PHP', 'Bulma','mysql' ,'vanila js'] 
+  },
+  {
+    name: 'HRM Realtime',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    detail: 'ระบบจัดการทรัพยากรบุคคล',
+    technologies: ['PHP', 'chart.js']
+  },
+  {
+    name: 'Multisite Management',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+    detail: 'ระบบจัดการหลายเว็บไซต์',
+    technologies: ['WordPress', 'ubuntu']
   }
-}
+])
 </script>
 
 <style scoped>
