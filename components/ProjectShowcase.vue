@@ -9,7 +9,7 @@
           <div class="flex flex-wrap gap-2 mb-4">
             <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-green-600 bg-green-100 rounded-full">{{ tech }}</span>
           </div>
-          <a href="#" class="inline-block text-green-600 border border-green-600 px-4 py-2 rounded hover:bg-green-600 hover:text-white transition-colors duration-300">ดูรายละเอียด</a>
+          <a href="#" class="inline-block text-green-600 border border-green-600 px-4 py-2 rounded hover:bg-green-600 hover:text-white transition-colors duration-300">View Details</a>
         </div>
       </div>
     </div>
@@ -21,28 +21,28 @@ import { ref } from 'vue'
 
 const projects = ref([
   {
-    name: 'CVS ENKKU',
+    name: 'CVS Specialist',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
-    technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
+    detail: 'Personnel Management System for ENKKU Academic Staff',
+    technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
   },
   {
     name: 'ENKKU Donations',
     image: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    detail: 'ระบบรับบริจาคออนไลน์',
-    technologies: ['PHP', 'Bulma','mysql' ,'vanila js'] 
+    detail: 'Online Donation System for Faculty Fund Support',
+    technologies: ['PHP', 'Bulma', 'MySQL', 'Vanilla JS'] 
   },
   {
     name: 'HRM Realtime',
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    detail: 'ระบบจัดการทรัพยากรบุคคล',
-    technologies: ['PHP', 'chart.js']
+    detail: 'Human Resource Management System for the Faculty',
+    technologies: ['PHP', 'Chart.js']
   },
   {
     name: 'Multisite Management',
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-    detail: 'ระบบจัดการหลายเว็บไซต์',
-    technologies: ['WordPress', 'ubuntu']
+    detail: 'Multiple Website Management System',
+    technologies: ['WordPress', 'Ubuntu']
   }
 ])
 </script>
