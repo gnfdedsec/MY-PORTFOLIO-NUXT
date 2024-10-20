@@ -8,6 +8,18 @@
             <h5 class="card-title">{{ project.name }}</h5>
             <p class="card-text">{{ project.detail }}</p>
           </div>
+          <div class="card-body2">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.detail }}</p>
+          </div>
+          <div class="card-body3">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.detail }}</p>
+          </div>
+          <div class="card-body4">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.detail }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -32,7 +44,7 @@ export default {
         {
           name: 'HRM',
           image: 'path/to/hrm-image.jpg',
-          detail: 'รูปหน้าจอโปรแกรม'
+          detail: 'รูปหน้าจอโปรแก���ม'
         },
         {
           name: 'Multisite',
