@@ -1,25 +1,12 @@
 <template>
-  <div class="project-showcase">
-    <div class="row">
-      <div class="col-md-3" v-for="project in projects" :key="project.name">
-        <div class="card">
-          <img :src="project.image" class="card-img-top" alt="Project Image">
-          <div class="card-body">
-            <h5 class="card-title">{{ project.name }}</h5>
-            <p class="card-text">{{ project.detail }}</p>
-          </div>
-          <div class="card-body2">
-            <h5 class="card-title">{{ project.name }}</h5>
-            <p class="card-text">{{ project.detail }}</p>
-          </div>
-          <div class="card-body3">
-            <h5 class="card-title">{{ project.name }}</h5>
-            <p class="card-text">{{ project.detail }}</p>
-          </div>
-          <div class="card-body4">
-            <h5 class="card-title">{{ project.name }}</h5>
-            <p class="card-text">{{ project.detail }}</p>
-          </div>
+  <div class="p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div v-for="project in projects" :key="project.name" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+        <img :src="project.image" :alt="project.name" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">{{ project.name }}</h3>
+          <p class="text-gray-600 text-sm mb-4">{{ project.detail }}</p>
+          <a href="#" class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">ดูรายละเอียด</a>
         </div>
       </div>
     </div>
@@ -44,7 +31,7 @@ export default {
         {
           name: 'HRM',
           image: 'path/to/hrm-image.jpg',
-          detail: 'รูปหน้าจอโปรแก���ม'
+          detail: 'รูปหน้าจอโปรแกรม'
         },
         {
           name: 'Multisite',
@@ -65,4 +52,3 @@ export default {
   margin-bottom: 20px;
 }
 </style>
-
