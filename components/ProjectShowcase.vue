@@ -18,33 +18,30 @@
 
 <script setup>
 import { ref } from 'vue'
-import card1 from '@/assets/img/card1.png'
-import card2 from '@/assets/img/card2.png'
-import card3 from '@/assets/img/card3.png'
-import card4 from '@/assets/img/card4.png'
+import { defineAssetUrl } from '#imports'
 
 const projects = ref([
   {
     name: 'CVS ENKKU',
-    image: card1,
+    image: defineAssetUrl('/img/card1.png'),
     detail: 'ระบบจัดการข้อมูลสำหรับ ENKKU',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API','mysql']
   },
   {
     name: 'ENKKU Donations',
-    image: card2,
+    image: defineAssetUrl('/img/card2.png'),
     detail: 'ระบบรับบริจาคออนไลน์',
     technologies: ['PHP', 'Bulma','mysql']
   },
   {
     name: 'HRM',
-    image: card3,
+    image: defineAssetUrl('/img/card3.png'),
     detail: 'ระบบจัดการทรัพยากรบุคคล',
     technologies: ['React', 'Express.js']
   },
   {
     name: 'Multisite Management',
-    image: card4,
+    image: defineAssetUrl('/img/card4.png'),
     detail: 'ระบบจัดการหลายเว็บไซต์',
     technologies: ['WordPress', 'PHP']
   }
