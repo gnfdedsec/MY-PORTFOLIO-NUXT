@@ -28,7 +28,7 @@
         <div class="mt-4 lg:mt-5 space-y-2 lg:space-y-0 lg:space-x-3 hidden lg:flex flex-col lg:flex-row items-center justify-center lg:justify-start">
           <button class="bg-green-500 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Hire Me</button>
           <button class="bg-gray-700 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Portfolio</button>
-          <p class="text-base lg:text-lg mt-2 lg:mt-0">
+          <p class="text-base lg:text-lg mt-2 lg:mt-0 hidden lg:block">
             <span class="border border-green-600 rounded-full px-3 lg:px-4 text-xs lg:text-sm text-green-500 py-0.5">
               Let's get to know me
             </span>
