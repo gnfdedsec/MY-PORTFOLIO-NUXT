@@ -9,7 +9,7 @@
           <div class="flex flex-wrap gap-2 mb-4">
             <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-green-600 bg-green-100 rounded-full">{{ tech }}</span>
           </div>
-          <a :href="project.link" target="_blank" class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">View Documents</a>
+          <a v-if="project.link" :href="project.link" target="_blank" class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">View Documents</a>
         </div>
       </div>
     </div>
@@ -43,7 +43,8 @@ const projects = ref([
     name: 'Multisite Management',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80',
     detail: 'Multiple Website Management System',
-    technologies: ['WordPress', 'Ubuntu', 'Enginx', 'MySQL']
+    technologies: ['WordPress', 'Ubuntu', 'Enginx', 'MySQL'],
+    link: 'https://example.com/multisite-management'
   },
   {
     name: 'Project Manager',
