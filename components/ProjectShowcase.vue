@@ -36,13 +36,13 @@ const projects = ref([
     name: 'HRM Realtime',
     image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Human Resource Management System for the Faculty',
-    technologies: ['PHP', 'Chart.js']
+    technologies: ['PHP', 'Chart.js', 'MySQL']
   },
   {
     name: 'Multisite Management',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80',
     detail: 'Multiple Website Management System',
-    technologies: ['WordPress', 'Ubuntu']
+    technologies: ['WordPress', 'Ubuntu', 'Enginx', 'MySQL']
   },
   {
     name: 'Project Manager',
@@ -54,7 +54,7 @@ const projects = ref([
     name: 'Teaster Project',
     image: 'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Automated software testing skills and manual testing skills',
-    technologies: ['Next.js', 'Discord.js', 'Jest', 'UAT']
+    technologies: ['Next.js', 'Discord.js', 'Jest', 'Cypress']
   }
 ])
 </script>
