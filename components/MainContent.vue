@@ -7,13 +7,12 @@
           alt="Profile Image"
           class="rounded-full w-48 h-48 object-cover bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom mb-4"
         >
-        <div class="flex items-center">
-          <Icon icon="ph:dev-to-logo-thin" class="text-5xl mr-2" />
-          <div>
-          
-            <p class="text-green-500 text-center lg:text-left"> MR.SURAWUT SUPON </p>
-            <p class="text-center lg:text-left">Examinee ID : </p>
-            <p class="text-4xl text-center lg:text-left"><span ref="counter">0</span></p>
+        <div class="flex flex-col items-center justify-center">
+          <Icon icon="ph:dev-to-logo-thin" class="text-5xl mb-2" />
+          <div class="text-center">
+            <p class="text-green-500"> MR.SURAWUT SUPON </p>
+            <p>Examinee ID : </p>
+            <p class="text-4xl"><span ref="counter">0</span></p>
           </div>
         </div>
       </div>
