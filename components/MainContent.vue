@@ -60,9 +60,9 @@
       return {
         texts: [
           "Hi everyone !  ",
-          "This site is going to show you, ",
+          "This site is  ",
           "A part of my works.",
-          "So, Let's check out and solve problems"
+          "So, Let's check out my works"
         ],
         currentText: '',
         currentIndex: 0,
