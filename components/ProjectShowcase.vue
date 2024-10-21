@@ -43,6 +43,12 @@ const projects = ref([
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80',
     detail: 'Multiple Website Management System',
     technologies: ['WordPress', 'Ubuntu']
+  },
+  {
+    name: 'Project Manager',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    detail: 'ระบบจัดการโครงการสำหรับทีมพัฒนา',
+    technologies: ['Vue.js', '
   }
 ])
 </script>
