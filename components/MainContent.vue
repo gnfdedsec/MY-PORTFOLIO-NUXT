@@ -59,10 +59,10 @@
     data() {
       return {
         texts: [
-          "Hi everyone !  ",
-          "This site is  ",
-          "A part of my works.",
-          "So, Let's check out my works"
+          "Hi everyone!",
+          "This site showcases",
+          "some of my work.",
+          "So, let's check it out."
         ],
         currentText: '',
         currentIndex: 0,
