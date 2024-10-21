@@ -24,7 +24,8 @@ const projects = ref([
     name: 'CVS Interest Research',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Personnel Management System for ENKKU Academic Staff',
-    technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
+    technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL'],
+    link: 'https://drive.google.com/file/d/1EmQe2cNu6nuFrUxWO4g59F60CdtjDgtM/view?usp=sharing'
   },
   {
     name: 'ENKKU Donations',
