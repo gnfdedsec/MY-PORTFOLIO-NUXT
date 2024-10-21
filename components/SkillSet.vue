@@ -1,7 +1,14 @@
 <template>
  <div  class="flex flex-col items-center  border border-black mt-2 p-4 rounded-lg"> 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-5">
-        <button class="brutalism-button animate__animated animate__fadeInUp" v-for="(button, index) in buttons" :key="index" :class="{'md:flex': index >= 2 && index < 3, 'lg:flex': index >= 3, 'hidden': (index >= 2 && index < 3 && !isMdScreen) || (index >= 3 && !isLgScreen)}" :style="{ animationDelay: `${index * 100}ms` }">
+        <button 
+            v-for="(button, index) in buttons" 
+            :key="index" 
+            :class="{'md:flex': index >= 2 && index < 3, 'lg:flex': index >= 3, 'hidden': (index >= 2 && index < 3 && !isMdScreen) || (index >= 3 && !isLgScreen)}" 
+            :style="{ animationDelay: `${index * 100}ms` }"
+            class="brutalism-button animate__animated animate__fadeInUp"
+            @click="handleButtonClick(button)"
+        >
             <Icon :icon="button.icon" class="text-4xl md:text-6xl" />
             <span class="mt-2 text-sm md:text-base">{{ button.name }}</span>
         </button>
@@ -21,7 +28,7 @@
     setup() {
       const buttons = [
         { name: 'Wordpress', icon: 'teenyicons:wordpress-solid' },
-        { name: 'Github', icon: 'devicon-plain:git-wordmark' },
+        { name: 'Github', icon: 'devicon-plain:git-wordmark', url: 'https://github.com/gnfdedsec?tab=repositories' },
         { name: 'Next.js', icon: 'file-icons:nextjs' },
         { name: 'Docker', icon: 'file-icons:docker' },
         { name: 'React.js', icon: 'file-icons:test-react' },
@@ -34,6 +41,12 @@
 
       const isMdScreen = ref(false);
       const isLgScreen = ref(false);
+
+      const handleButtonClick = (button) => {
+        if (button.url) {
+          window.open(button.url, '_blank');
+        }
+      };
 
       onMounted(() => {
         const checkScreenSize = () => {
@@ -56,6 +69,7 @@
         buttons,
         isMdScreen,
         isLgScreen,
+        handleButtonClick,
       };
     }
   };
