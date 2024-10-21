@@ -22,13 +22,13 @@ import { ref } from 'vue'
 const projects = ref([
   {
     name: 'CVS Interest Research',
-    image: 'https://img.freepik.com/free-vector/hand-drawn-people-working-together-illustration_23-2148948977.jpg',
+    image: 'https://img.freepik.com/free-vector/teacher-concept-illustration_114360-1638.jpg',
     detail: 'Personnel Management System for ENKKU Academic Staff',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
   },
   {
     name: 'ENKKU Donations',
-    image: 'https://img.freepik.com/free-vector/money-concept-illustration_114360-1721.jpg',
+    image: 'https://img.freepik.com/free-vector/realistic-golden-coins-composition_52683-24736.jpg',
     detail: 'Online Donation System for Faculty Fund Support',
     technologies: ['PHP', 'Bulma', 'MySQL', 'Vanilla JS'] 
   },
