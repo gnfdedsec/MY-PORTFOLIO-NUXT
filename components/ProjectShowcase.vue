@@ -28,7 +28,7 @@ const projects = ref([
   },
   {
     name: 'ENKKU Donations',
-    image: 'https://img.freepik.com/free-vector/realistic-golden-coins-composition_52683-24736.jpg',
+    image: 'https://img.freepik.com/free-photo/stack-coins-money-isolated-white-background_1232-2067.jpg',
     detail: 'Online Donation System for Faculty Fund Support',
     technologies: ['PHP', 'Bulma', 'MySQL', 'Vanilla JS'] 
   },
