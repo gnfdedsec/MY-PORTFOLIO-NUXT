@@ -44,7 +44,7 @@ const projects = ref([
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80',
     detail: 'Multiple Website Management System',
     technologies: ['WordPress', 'Ubuntu', 'Enginx', 'MySQL'],
-    link: 'https://example.com/multisite-management'
+    link: 'https://drive.google.com/file/d/1t_F5yrtFFzkCJLtu-JKkegyVqs0Eqd5e/view?usp=sharing'
   },
   {
     name: 'Project Manager',
