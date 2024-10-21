@@ -11,7 +11,7 @@
           <Icon icon="ph:dev-to-logo-thin" class="text-5xl mr-2" />
           <div>
           
-            <p class="text-green-500">MR.SURAWUT SUPON (ALEX)</p>
+            <p class="text-green-500">MR.SURAWUT SUPON (ALEX )</p>
             <p>Examinee ID : </p>
             <p class="text-4xl"><span ref="counter">0</span></p>
           </div>
