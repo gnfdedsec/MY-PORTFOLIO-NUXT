@@ -22,25 +22,25 @@ import { ref } from 'vue'
 const projects = ref([
   {
     name: 'CVS Interest Research',
-    image: 'https://img.freepik.com/free-vector/teacher-concept-illustration_114360-1638.jpg',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Personnel Management System for ENKKU Academic Staff',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
   },
   {
     name: 'ENKKU Donations',
-    image: 'https://img.freepik.com/free-photo/stack-coins-money-isolated-white-background_1232-2067.jpg',
+    image: 'https://images.unsplash.com/photo-1589758438368-0ad531db3366?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
     detail: 'Online Donation System for Faculty Fund Support',
     technologies: ['PHP', 'Bulma', 'MySQL', 'Vanilla JS'] 
   },
   {
     name: 'HRM Realtime',
-    image: 'https://img.freepik.com/free-vector/human-resources-management-concept-illustration_114360-8370.jpg',
+    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Human Resource Management System for the Faculty',
     technologies: ['PHP', 'Chart.js']
   },
   {
     name: 'Multisite Management',
-    image: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-cms-illustration_23-2149387396.jpg',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80',
     detail: 'Multiple Website Management System',
     technologies: ['WordPress', 'Ubuntu']
   }
