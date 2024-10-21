@@ -9,10 +9,7 @@
           <div class="flex flex-wrap gap-2 mb-4">
             <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-green-600 bg-green-100 rounded-full">{{ tech }}</span>
           </div>
-          <div class="flex gap-2">
-            <a v-if="project.link" :href="project.link" target="_blank" class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">View Documents</a>
-            <a v-if="project.cvsLink" :href="project.cvsLink" target="_blank" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">CVS Link</a>
-          </div>
+          <a :href="project.link" target="_blank" class="inline-block px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors duration-300">View Documents</a>
         </div>
       </div>
     </div>
@@ -27,8 +24,7 @@ const projects = ref([
     name: 'CVS Interest Research',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     detail: 'Personnel Management System for ENKKU Academic Staff',
-    technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL'],
-    cvsLink: 'https://i.postimg.cc/fTzD7SHC/Screenshot-2567-10-21-at-16-03-26.png'
+    technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
   },
   {
     name: 'ENKKU Donations',
