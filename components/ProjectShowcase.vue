@@ -22,19 +22,19 @@ import { ref } from 'vue'
 const projects = ref([
   {
     name: 'CVS Interest Research',
-    image: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-development-illustration_23-2149385738.jpg',
+    image: 'https://img.freepik.com/free-vector/human-resources-concept-illustration_114360-7801.jpg',
     detail: 'Personnel Management System for ENKKU Academic Staff',
     technologies: ['Next.js', 'Tailwind CSS', 'JWT API', 'MySQL']
   },
   {
     name: 'ENKKU Donations',
-    image: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-charity-donation-illustration_23-2149215370.jpg',
+    image: 'https://img.freepik.com/free-vector/charity-concept-illustration_114360-8220.jpg',
     detail: 'Online Donation System for Faculty Fund Support',
     technologies: ['PHP', 'Bulma', 'MySQL', 'Vanilla JS'] 
   },
   {
     name: 'HRM Realtime',
-    image: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-human-resources-illustration_23-2149385837.jpg',
+    image: 'https://img.freepik.com/free-vector/human-resources-management-concept-illustration_114360-8370.jpg',
     detail: 'Human Resource Management System for the Faculty',
     technologies: ['PHP', 'Chart.js']
   },
