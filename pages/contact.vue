@@ -6,7 +6,7 @@
           <img class="h-48 w-full object-cover md:w-48" src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Contact Image">
         </div>
         <div class="p-8">
-          <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Contact Me</div>
+          <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Contact Me 👋 </div>
           <h2 class="block mt-1 text-lg leading-tight font-medium text-black">Contact Information</h2>
           <div class="mt-4">
             <div class="flex items-center mb-3">
@@ -21,10 +21,7 @@
               <Icon icon="mdi:discord" class="text-2xl text-gray-600 mr-2" />
               <span class="text-gray-700">DRIVE_#7856</span>
             </div>
-            <div class="flex items-center">
-              <Icon icon="mdi:discord" class="text-2xl text-gray-600 mr-2" />
-              <a href="https://discord.gg/YourDiscordInvite" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-indigo-500">Join Our Discord</a>
-            </div>
+          
           </div>
         </div>
       </div>
