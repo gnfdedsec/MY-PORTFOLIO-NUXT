@@ -25,7 +25,7 @@
           I'm <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom">ALEX TH</span>
         </h1>
         <p class="text-base lg:text-lg mt-2 lg:mt-3">Web Developer / Frontend / Backend / Teaster</p>
-        <div class="mt-4 lg:mt-5 space-y-2 lg:space-y-0 lg:space-x-3 flex flex-col lg:flex-row items-center justify-center lg:justify-start">
+        <div class="mt-4 lg:mt-5 space-y-2 lg:space-y-0 lg:space-x-3 hidden lg:flex flex-col lg:flex-row items-center justify-center lg:justify-start">
           <button class="bg-green-500 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Hire Me</button>
           <button class="bg-gray-700 text-white py-1.5 px-3 lg:py-2 lg:px-4 rounded text-sm lg:text-base cursor-default">Portfolio</button>
           <p class="text-base lg:text-lg mt-2 lg:mt-0">
