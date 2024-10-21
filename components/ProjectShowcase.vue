@@ -9,7 +9,7 @@
           <div class="flex flex-wrap gap-2 mb-4">
             <span v-for="tech in project.technologies" :key="tech" class="px-2 py-1 text-xs font-semibold text-green-600 bg-green-100 rounded-full">{{ tech }}</span>
           </div>
-          <a :href="project.link" target="_blank" class="text-blue-500 hover:underline">Supporting documents</a>
+          <a :href="project.link" target="_blank" class="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">ดูเอกสารเพิ่มเติม</a>
         </div>
       </div>
     </div>
