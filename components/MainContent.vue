@@ -19,7 +19,7 @@
       </div>
 
       <!-- คอลัมน์ซ้าย -->
-      <div class="lg:order-1 pt-10 lg:pt-20 px-4 lg:px-10 text-center lg:text-left">
+      <div class="lg:order-1 pt-5 lg:pt-10 px-4 lg:px-10 text-center lg:text-left">
         <h2 class="text-gray-400 text-base lg:text-lg hidden lg:block">Hi !</h2>
         <h1 class="text-3xl lg:text-4xl font-bold">
           I'm <span class="bg-gradient-to-r from-green-400 via-fuchsia-500 to-orange-500 bg-[length:100%_2px] bg-no-repeat bg-bottom">ALEX TH</span>
