@@ -45,9 +45,9 @@
         <NuxtLink
           v-show="showButton"
           to="/projecshowcase"
-          class="border border-green-500 p-2 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-lg lg:text-xl animate-fade-up focus:outline-none"
+          class="border border-green-500 p-2 text-green-500 hover:bg-green-500 hover:text-white transition duration-300 rounded text-xl lg:text-2xl animate-fade-up focus:outline-none"
         >
-          สอบสำนักคอมพิวเตอร์ฯ ม.อุบลฯ
+          My Project
         </NuxtLink>
       </div>
     </main>
